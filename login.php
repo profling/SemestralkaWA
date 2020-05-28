@@ -11,7 +11,7 @@ if (!empty($_SESSION['user_id'])){
 $errors=false;
 if (!empty($_POST)){
     #region zpracování formuláře
-    $userQuery=$db->prepare('SELECT * FROM users WHERE email=:email LIMIT 1;');
+    $userQuery=$db->prepare('SELECT * FROM uzivatele WHERE email=:email LIMIT 1;');
     $userQuery->execute([
         ':email'=>trim($_POST['email'])
     ]);
@@ -19,7 +19,7 @@ if (!empty($_POST)){
 
         if (password_verify($_POST['password'],$user['password'])){
             //heslo je platné => přihlásíme uživatele
-            $_SESSION['user_id']=$user['user_id'];
+            $_SESSION['user_id']=$user['id'];
             $_SESSION['user_name']=$user['name'];
             $_SESSION['user_admin']=$user['administrator'];
             header('Location: index.php');

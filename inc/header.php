@@ -7,7 +7,7 @@ require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
     <title>Trénuj sval, buchty bal!</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 <header class="container bg-dark">
