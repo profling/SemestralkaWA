@@ -1,5 +1,6 @@
 <?php
 require_once "inc/header.php";
+
 #nacteni zvoleneho jidelnicku
 $queryzvolen= $db->prepare('Select jidelnicek_id from uzivatele where id=:iduser');
 $queryzvolen->execute([':iduser'=>$_SESSION['user_id']]);
@@ -41,6 +42,76 @@ Dnešní statistika:
         ?>
     </small>
 </h3>
+</div>
+<div>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="3" class="text-center">Doporučená Jídla</th>
+        </tr>
+        <tr>
+            <th> Název</th>
+            <th> Popis</th>
+            <th> Stav</th>
+        </tr>
+        </thead>
+        <?php
+        #ziskani a vypsani doporucenych jidel
+        $queryDopo = $db->prepare('SELECT jidlo_id FROM jidlakjidelnicku WHERE jidelnicek_id=:idjidelnicek;');
+        $queryDopo->execute([':idjidelnicek'=>$zvoleny['jidelnicek_id']]);
+        $dopojidla = $queryDopo->fetchAll(PDO::FETCH_ASSOC);
+        $prikaz = 'SELECT * FROM jidlo WHERE id=-1';#vzdy neplatna podminka, ale ve for dikz tomu muzu zacit orem vzdy;
+        foreach ($dopojidla as $dopojidlo){
+         $prikaz = $prikaz.' or id='.$dopojidlo['jidlo_id'];
+        }
+        $prikaz = $prikaz. ';';
+        $queryJidla = $db->prepare($prikaz);
+        $queryJidla->execute();
+        $jidla = $queryJidla->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($jidla as $jidlo){
+           ?>
+            <tr>
+                <th> <?php echo $jidlo['nazev']; ?></th>
+                <th>
+                    <button type="button" class="btn btn-outline-info" href="popisjidla.php">Info</button>
+                </th>
+                <th>
+
+                        <?php
+                        $pomoc=0;#pomocna promenna
+                        foreach ($dnesnijidla as $porovnani){
+                           if($porovnani['id']==$jidlo['id']){
+                                $pomoc=1;
+                           }
+                        }
+                        if($pomoc==1){
+                            ?>
+                            <form method="post">
+                                <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>"/>
+                                <button type="submit" class="btn btn-outline-warning">Snědeno</button>
+                            </form>
+                            <?
+                        }
+                        else
+                        {
+                            ?>
+                            <form method="post">
+                                <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>"/>
+                                <button type="submit" class="btn btn-outline-success">Vybrat</button>
+                            </form>
+                            <?php
+
+                        }
+                        ?>
+
+                </th>
+            </tr>
+
+            <?php
+        }
+        ?>
+    </table>
+
 </div>
 
 
