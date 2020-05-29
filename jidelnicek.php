@@ -10,6 +10,7 @@ if(!empty($_POST)){
 $queryVybrani = $db->prepare('UPDATE uzivatele SET jidelnicek_id=:idjidelnicek WHERE id=:iduser;');
 $queryVybrani->execute([':idjidelnicek'=>$_POST['idjidelnicek'],
                             ':iduser'=>$_SESSION['user_id']]);
+$_SESSION['user_jidelnicek']= $_POST['idjidelnicek'];
 }
 ?>
 <table class="table">

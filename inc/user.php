@@ -16,6 +16,7 @@ if (!empty($_SESSION['user_id'])){
         //uživatel už není v DB, nebo není aktivní => musíme ho odhlásit
         unset($_SESSION['user_id']);
         unset($_SESSION['user_name']);
+        unset($_SESSION['user_jidelnicek']);
         header('Location: index.php');
         exit();
     }

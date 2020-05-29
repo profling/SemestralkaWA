@@ -22,6 +22,7 @@ if (!empty($_POST)){
             $_SESSION['user_id']=$user['id'];
             $_SESSION['user_name']=$user['name'];
             $_SESSION['user_admin']=$user['administrator'];
+            $_SESSION['user_jidelnicek']=$user['jidelnicek_id'];
             header('Location: index.php');
             exit();
         }else{

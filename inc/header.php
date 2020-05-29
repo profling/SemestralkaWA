@@ -21,7 +21,7 @@ require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
                 <a class="nav-link" href="jidelnicek.php">Jídelníčky</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Přidat jídlo</a>
+                <a class="nav-link" href="jidlo.php">Přidat jídlo</a>
             </li>
         </ul>
     <div class="navbar-text">
