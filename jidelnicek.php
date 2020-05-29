@@ -26,7 +26,7 @@ $queryVybrani->execute([':idjidelnicek'=>$_POST['idjidelnicek'],
     foreach ($jidelnicky as $jidelnicek){
         echo "<tr>";
         //vypsani hodnot jidel
-        echo "<th>".$jidelnicek['nazev']."</th>"."<th>".$jidelnicek['popis']."</th>"."<th>".$jidelnicek['cukry']."</th>"."<th>".$jidelnicek['sacharidy']."</th>"."<th>".$jidelnicek['bilkoviny']."</th>";
+        echo "<th>".$jidelnicek['nazev']."</th>"."<th>".$jidelnicek['popis']."</th>"."<th>".$jidelnicek['cukry']."g</th>"."<th>".$jidelnicek['sacharidy']."g</th>"."<th>".$jidelnicek['bilkoviny']."g</th>";
         //odkaz na doporucena jidla
         echo "<th>";?>
         <form method="get" action="doporucenajidla.php">

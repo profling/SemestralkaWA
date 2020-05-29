@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2facacb5-fd07-47ea-a477-d822e00685b6" name="Default Changelist" comment="funkční registrace, přihlášeni a odhlášení commit pokus 2">
+    <list default="true" id="2facacb5-fd07-47ea-a477-d822e00685b6" name="Default Changelist" comment="pridani stranky jidelnicek, ktera je uz fukncni">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doporucenajidla.php" beforeDir="false" afterPath="$PROJECT_DIR$/doporucenajidla.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jidelnicek.php" beforeDir="false" afterPath="$PROJECT_DIR$/jidelnicek.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590652465542</updated>
-      <workItem from="1590652466677" duration="17341000" />
+      <workItem from="1590652466677" duration="23083000" />
     </task>
     <task id="LOCAL-00001" summary="prvni a testovací commit">
       <created>1590652528349</created>
@@ -85,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590669166425</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="pridani stranky jidelnicek, ktera je uz fukncni">
+      <created>1590701828707</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590701828707</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,17 +115,18 @@
     <MESSAGE value="pridani login a index" />
     <MESSAGE value="funkční registrace, přihlášeni a odhlášení" />
     <MESSAGE value="funkční registrace, přihlášeni a odhlášení commit pokus 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="funkční registrace, přihlášeni a odhlášení commit pokus 2" />
+    <MESSAGE value="pridani stranky jidelnicek, ktera je uz fukncni" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridani stranky jidelnicek, ktera je uz fukncni" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590666803642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666803642" />
-    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1590669284203">
+    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1590701846703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590669284203" />
+    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590701846703" />
     <state x="193" y="67" key="DiffContextDialog" timestamp="1590666972149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -134,10 +143,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="125" width="626" height="577" key="RollbackChangesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666974227" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590669429766">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590701865586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590669429766" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590701865586" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590669254047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
