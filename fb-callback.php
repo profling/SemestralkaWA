@@ -97,5 +97,5 @@ if (!empty($user)){
 }
 
 //přesměrujeme uživatele na homepage
-header('Location: login.php');
+header('Location: prehled.php');
 #endregion přihlášení uživatele

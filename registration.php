@@ -1,6 +1,7 @@
 <?php
 //načteme připojení k databázi a inicializujeme session
-require_once 'inc/user.php';
+session_start();
+require_once 'inc/db.php';
 
 if (!empty($_SESSION['user_id'])){
     //uživatel už je přihlášený, nemá smysl, aby se registroval

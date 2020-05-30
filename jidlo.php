@@ -61,9 +61,9 @@ foreach ($dnesnijidla as $dnesnijidlo){
 ?>
     <div class="">
         <div class="form-group">
-            <form method="post">
-                <label for="datum">Datum:</label>
-                <input type="date" name="datum" id="datum" value="<?php echo $datum;?>" />
+            <form method="post" class="form-inline">
+                <label for="datum">Datum: </label>
+                <input type="date" name="datum" id="datum" required class="form-control" value="<?php echo $datum;?>" />
                 <button type="submit" class="btn btn-outline-primary" >Zvolit</button>
             </form>
         </div>
