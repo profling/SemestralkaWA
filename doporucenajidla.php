@@ -1,4 +1,5 @@
 <?php
+require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
 require_once "inc/header.php";
 #nacteni jidelnicku
 $queryJidelnicek= $db->prepare('SELECT * FROM jidelnicek WHERE id=:idjidelnicek;');

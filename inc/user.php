@@ -1,10 +1,7 @@
 <?php
-
-session_start(); //spustíme session
-
 require_once 'db.php'; //načteme připojení k databázi
 
-
+session_start(); //spustíme session
 
 #region kontrola, jestli je přihlášený uživatel platný
 if (!empty($_SESSION['user_id'])){
@@ -12,12 +9,16 @@ if (!empty($_SESSION['user_id'])){
     $userQuery->execute([
         ':id'=>$_SESSION['user_id']
     ]);
-    if ($userQuery->rowCount()!=1){
+    if ($userQuery->rowCount()!=1) {
         //uživatel už není v DB, nebo není aktivní => musíme ho odhlásit
         unset($_SESSION['user_id']);
         unset($_SESSION['user_name']);
         unset($_SESSION['user_jidelnicek']);
-        header('Location: index.php');
+        header('Location: login.php');
         exit();
     }
+
+
+}else{
+    header('Location: login.php');
 }

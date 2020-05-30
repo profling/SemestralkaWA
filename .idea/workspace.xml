@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2facacb5-fd07-47ea-a477-d822e00685b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doporucenajidla.php" beforeDir="false" afterPath="$PROJECT_DIR$/doporucenajidla.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jidelnicek.php" beforeDir="false" afterPath="$PROJECT_DIR$/jidelnicek.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jidlo.php" beforeDir="false" afterPath="$PROJECT_DIR$/jidlo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pridatvlastni.php" beforeDir="false" afterPath="$PROJECT_DIR$/pridatvlastni.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590652465542</updated>
-      <workItem from="1590652466677" duration="40576000" />
+      <workItem from="1590652466677" duration="48321000" />
     </task>
     <task id="LOCAL-00001" summary="prvni a testovací commit">
       <created>1590652528349</created>
@@ -113,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590765974355</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="No konecne hotove to pridavani jidla :D eeeeeej">
+      <created>1590857699472</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590857699472</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,17 +154,26 @@
     <MESSAGE value="pridani funkcni stranky s dopo jidla" />
     <MESSAGE value="s pulky hotove pridavani jidla" />
     <MESSAGE value="stale ne hotove pridani jidla :( nevymyslet blbosti a makat" />
-    <option name="LAST_COMMIT_MESSAGE" value="stale ne hotove pridani jidla :( nevymyslet blbosti a makat" />
+    <MESSAGE value="No konecne hotove to pridavani jidla :D eeeeeej" />
+    <option name="LAST_COMMIT_MESSAGE" value="No konecne hotove to pridavani jidla :D eeeeeej" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="484" y="3" key="#PHP" timestamp="1590866518510">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="484" y="3" key="#PHP/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590866518510" />
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590666803642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666803642" />
-    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1590765973610">
+    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1590857698652">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590765973610" />
+    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590857698652" />
+    <state x="553" y="296" width="445" height="260" key="ComposerInitDialogKey" timestamp="1590866545202">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="296" width="445" height="260" key="ComposerInitDialogKey/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590866545202" />
     <state x="193" y="67" key="DiffContextDialog" timestamp="1590666972149">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -158,18 +182,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="519" y="227" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666794176" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1590856271166">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1590872121994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590856271166" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590872121994" />
     <state x="501" y="125" width="626" height="577" key="RollbackChangesDialog" timestamp="1590666974227">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="125" width="626" height="577" key="RollbackChangesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666974227" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590765983144">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590857708922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590765983144" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590857708922" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590669254047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -178,5 +202,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590688636197" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/registration.php</url>
+          <line>54</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

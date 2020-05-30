@@ -1,10 +1,11 @@
 <?php
 //načteme připojení k databázi a inicializujeme session
-require_once 'inc/user.php';
-
+session_start();
+require_once 'inc/db.php';
+require_once 'inc/facebook.php';
 if (!empty($_SESSION['user_id'])){
     //uživatel už je přihlášený, nemá smysl, aby se přihlašoval znovu
-    header('Location: index.php');
+    header('Location: prehled.php');
     exit();
 }
 
@@ -23,7 +24,7 @@ if (!empty($_POST)){
             $_SESSION['user_name']=$user['name'];
             $_SESSION['user_admin']=$user['administrator'];
             $_SESSION['user_jidelnicek']=$user['jidelnicek_id'];
-            header('Location: index.php');
+            header('Location: prehled.php');
             exit();
         }else{
             $errors=true;
@@ -38,6 +39,22 @@ if (!empty($_POST)){
 //vložíme do stránek patičku
 $pageTitle='Přihlášení uživatele';
 include 'inc/header.php';
+
+#prihlasovani pomoci facebooku
+//inicializujeme helper pro vytvoření odkazu
+$fbHelper = $fb->getRedirectLoginHelper();
+
+//nastavení parametrů pro vyžádání oprávnění a odkaz na přesměrování po přihlášení
+$permissions = ['email'];
+$callbackUrl = htmlspecialchars('https://eso.vse.cz/~polo03/SemestralkaWA/fb-callback.php');
+//TODO nezapomeňte v předchozím řádku upravit adresu ke své vlastní aplikaci
+
+//necháme helper sestavit adresu pro odeslání požadavku na přihlášení
+$fbLoginUrl = $fbHelper->getLoginUrl($callbackUrl, $permissions);
+
+
+
+
 ?>
 
     <h2>Přihlášení uživatele</h2>
@@ -56,7 +73,9 @@ include 'inc/header.php';
         </div>
         <button type="submit" class="btn btn-primary">přihlásit se</button>
         <a href="registration.php" class="btn btn-light">registrovat se</a>
+        <a href="<?php echo $fbLoginUrl; ?>" class="btn btn-light">přihlásit se pomocí Facebooku</a>
         <a href="index.php" class="btn btn-light">zrušit</a>
+
     </form>
 
 <?php

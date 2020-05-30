@@ -1,6 +1,4 @@
-<?php
-require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
-?>
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -15,7 +13,7 @@ require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">Domů <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="prehled.php">Přehled <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="jidelnicek.php">Jídelníčky</a>

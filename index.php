@@ -1,6 +1,6 @@
 <?php
-require_once 'inc/header.php';
 
+echo '<a href="login.php" class="btn btn-primary">přihlásit se</a>';
 
 
 

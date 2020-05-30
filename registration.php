@@ -24,7 +24,7 @@ if (!empty($_POST)){
         $errors['name']='Musíte zadat platnou e-mailovou adresu.';
     }else{
         //kontrola, jestli již není e-mail registrovaný
-        $mailQuery=$db->prepare('SELECT * FROM uzivatele WHERE email=:email LIMIT 1;');
+        $mailQuery=$db->prepare('SELECT * FROM uzivatele WHERE email=:email AND password!=NULL LIMIT 1;');
         $mailQuery->execute([
             ':email'=>$email
         ]);
@@ -46,20 +46,30 @@ if (!empty($_POST)){
     if (empty($errors)){
         //zaregistrování uživatele
         $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
+        #testjestliuzneni prihlasen pomoci fb
+        $queryfb= $db->prepare('SELECT * from uzivatele WHERE email=:email');
+        $queryfb->execute([':email'=>$_POST['email']]);
+        if($queryfb->rowCount()>0){#uzivatel ma prihlaseni pomoci fb
+            $uzivatel= $queryfb->fetch(PDO::FETCH_ASSOC);
+            $query = $db->prepare('UPDATE uzivatele SET password=:password WHERE facebook_id=:facebookId;');
+            $query->execute([':password'=>$password,
+                                ':facebookId'=>$uzivatel['facebook_id'] ] );
+        }else { #uzivatel nema prihlaseni pomoci fb
+            $query=$db->prepare('INSERT INTO uzivatele (name, email, password, active) VALUES (:name, :email, :password, 1);');
+            $query->execute([
+                ':name'=>$name,
+                ':email'=>$email,
+                ':password'=>$password
+            ]);
+        }
 
-        $query=$db->prepare('INSERT INTO uzivatele (name, email, password, active) VALUES (:name, :email, :password, 1);');
-        $query->execute([
-            ':name'=>$name,
-            ':email'=>$email,
-            ':password'=>$password
-        ]);
 
         //uživatele rovnou přihlásíme
-        $_SESSION['user_id']=$db->lastInsertId();
-        $_SESSION['user_name']=$name;
+        $_SESSION['user_id']=$uzivatel['id'];
+        $_SESSION['user_name']=$uzivatel['name'];
 
         //přesměrování na homepage
-        header('Location: index.php');
+        header('Location: prehled.php');
         exit();
     }
 

@@ -1,4 +1,5 @@
 <?php
+require_once 'inc/user.php'; //pripojeni k databayi a incicialiyace session
 require_once "inc/header.php";
 #nacteni zvoleneho jidelnicku
 $queryzvolen= $db->prepare('Select jidelnicek_id from uzivatele where id=:iduser');
@@ -219,10 +220,12 @@ Statistika:
         }
 
         ?>
-        <tr>
+        <tr class="table-active">
             <th>
-                <a type="button" class="btn btn-outline-primary" href="pridatvlastni.php">Přidat vlastní</a>
+                <a type="button" class="btn btn-primary" href="pridatvlastni.php">Přidat vlastní</a>
             </th>
+        <th></th>
+        <th></th>
         </tr>
     </table>
 </div>
