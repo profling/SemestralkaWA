@@ -37,7 +37,7 @@ $jidelnicky= $query->fetchALL(PDO::FETCH_ASSOC);
         echo "<th>";?>
         <form method="get" action="editjidelnicek.php">
             <input type="hidden" name="idjidelnicek" value="<?php echo $jidelnicek['id']; ?>"/>
-            <button type="submit" class="btn btn-outline-secondary">Upravit </button>
+            <button type="submit" class="btn btn-outline-primary">Upravit </button>
         </form>
         <?php echo "</th>";
         echo "</tr>";
@@ -51,8 +51,46 @@ $jidelnicky= $query->fetchALL(PDO::FETCH_ASSOC);
     </thead>
 </table>
 
+<?php
+$queryJidla= $db->prepare('SELECT * FROM jidlo;');
+$queryJidla->execute();
+$jidla= $queryJidla->fetchAll(PDO::FETCH_ASSOC);
+?>
+<h3>Administrace Jídel</h3>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="6" class="text-center">Doporučená Jídla</th>
+        </tr>
+        <tr>
+            <th> Název</th>
+            <th> Popis</th>
+            <th> Obsah cukru</th>
+            <th> Obsah sacharidů</th>
+            <th> Obsah bílkovin</th>
+            <th></th>
+        </tr>
+        </thead>
+        <?php
+        foreach ($jidla as $jidlo) {
+            echo "<tr>";
+            echo "<th>" . $jidlo['nazev'] . "</th><th>" . $jidlo['popis'] . "</th><th>" . $jidlo['cukry'] . "g</th><th>" . $jidlo['sacharidy'] . "g</th><th>" . $jidlo['bilkoviny'] . "g</th>";
+            echo "<th>";
+            echo '<form  method="get" action="editjidlo.php">';
+            echo '<input type="hidden" name="idjidla" value="'.$jidlo['id'].'"/>';
+            echo '<button type="submit" class="btn btn-outline-primary">Upravit</button>';
+            echo '</form>';
+            echo "</th>";
+            echo "</tr>";
+        }
+        ?>
+        <thead class="thead-light">
+        <th colspan="6">
+            <a type="button" class="btn btn-primary" href="pridatjidlo.php">Přidat Jídlo</a>
+        </th>
 
-
+        </thead>
+    </table>
 
 
 
