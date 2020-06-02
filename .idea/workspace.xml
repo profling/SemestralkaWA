@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2facacb5-fd07-47ea-a477-d822e00685b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SemestralkaWA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SemestralkaWA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fb-callback.php" beforeDir="false" afterPath="$PROJECT_DIR$/fb-callback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pridatvlastni.php" beforeDir="false" afterPath="$PROJECT_DIR$/pridatvlastni.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jidlo.php" beforeDir="false" afterPath="$PROJECT_DIR$/jidlo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590652465542</updated>
       <workItem from="1590652466677" duration="52167000" />
-      <workItem from="1591016370648" duration="6859000" />
+      <workItem from="1591016370648" duration="15377000" />
     </task>
     <task id="LOCAL-00001" summary="prvni a testovací commit">
       <created>1590652528349</created>
@@ -144,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590875396457</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="pridani pridani vlastniho jidla">
+      <created>1591093919445</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1591093919445</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +186,8 @@
     <MESSAGE value="No konecne hotove to pridavani jidla :D eeeeeej" />
     <MESSAGE value="Funkcni prihlasovani pomoci fb a ochrana proti neprihlasenym." />
     <MESSAGE value="mensi graficke upravy pred spanim" />
-    <option name="LAST_COMMIT_MESSAGE" value="mensi graficke upravy pred spanim" />
+    <MESSAGE value="pridani pridani vlastniho jidla" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridani pridani vlastniho jidla" />
   </component>
   <component name="WindowStateProjectService">
     <state x="484" y="3" key="#PHP" timestamp="1590866518510">
@@ -186,10 +198,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666803642" />
-    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1590875395692">
+    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1591093918119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590875395692" />
+    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591093918119" />
     <state x="553" y="296" width="445" height="260" key="ComposerInitDialogKey" timestamp="1590866545202">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -202,10 +214,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="519" y="227" key="NewPhpClassDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666794176" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1590872121994">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1591103968233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590872121994" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591103968233" />
     <state x="501" y="125" width="626" height="577" key="RollbackChangesDialog" timestamp="1590666974227">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,10 +230,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590669254047" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591093168655">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591101282451">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591093168655" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591101282451" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

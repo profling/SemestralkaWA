@@ -220,13 +220,12 @@ Statistika:
         }
 
         ?>
-        <tr class="table-active">
-            <th>
+        <thead class="thead-light">
+            <th colspan="3">
                 <a type="button" class="btn btn-primary" href="pridatvlastni.php">Přidat vlastní</a>
             </th>
-        <th></th>
-        <th></th>
-        </tr>
+
+        <thead class="thead-light">
     </table>
 </div>
 

@@ -14,6 +14,7 @@ if (!empty($_SESSION['user_id'])){
         unset($_SESSION['user_id']);
         unset($_SESSION['user_name']);
         unset($_SESSION['user_jidelnicek']);
+        unset($_SESSION['user_admin']);
         header('Location: login.php');
         exit();
     }

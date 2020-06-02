@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <title>Trénuj sval, buchty bal!</title>
+    <title>Nakrm sval, buchty bal!</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -21,6 +21,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="jidlo.php">Přidat jídlo</a>
             </li>
+            <?php
+            if(!empty($_SESSION['user_admin'])){
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="administrace.php">Administrace</a>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
     <div class="navbar-text">
         <?php

@@ -22,7 +22,7 @@ if (!empty($_POST)){
             //heslo je platné => přihlásíme uživatele
             $_SESSION['user_id']=$user['id'];
             $_SESSION['user_name']=$user['name'];
-            $_SESSION['user_admin']=$user['administrator'];
+            $_SESSION['user_admin']=$user['admin'];
             $_SESSION['user_jidelnicek']=$user['jidelnicek_id'];
             header('Location: prehled.php');
             exit();

@@ -21,6 +21,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="jidlo.php">Přidat jídlo</a>
             </li>
+            <?php
+            if(!empty($_SESSION['user_admin'])){
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="administrace.php">Administrace</a>
+                </li>
+                <?php
+            }
+            ?>
         </ul>
         <div class="navbar-text">
             <?php
@@ -38,7 +47,7 @@
 </header>
 <main class="container pt-2">
 <div>
-<h2 class="text-center">Trenuj sval, buchty bal! je jednoduchá webová aplikace díky ní můžeme evidovat svuj příjem výživových hodnot a vybírat z receptářu vhodných jídel, pro námi zvolený jídelniček. </h2>
+<h2 class="text-center">Nakrm sval, buchty bal! je jednoduchá webová aplikace díky ní můžeme evidovat svuj příjem výživových hodnot a vybírat z receptářu vhodných jídel, pro námi zvolený jídelniček. </h2>
 <div class="d-flex justify-content-center row">
     <div class="col-md-15>"> <a href="login.php" type="button" class="btn btn-primary mb-2 mr-sm-2 mb-sm-0">Přihlásit se</a></div>
     <div class="col-md-15>"> <a href="registration.php" type="button" class="btn btn-secondary mb-2 mr-sm-2 mb-sm-0">Zaregistrovat se</a></div>

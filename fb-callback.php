@@ -94,6 +94,8 @@ if (!empty($user)){
     //přihlásíme uživatele (uložíme si jeho údaje do session)
     $_SESSION['user_id']=$user['id'];
     $_SESSION['user_name']=$user['name'];
+    $_SESSION['user_admin']=$user['admin'];
+    $_SESSION['user_jidelnicek']=$user['jidelnicek_id'];
 }
 
 //přesměrujeme uživatele na homepage
