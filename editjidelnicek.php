@@ -48,7 +48,7 @@ if(!empty($_POST)){
 <h3>Úprava jídelníčku</h3>
 <form id="edit" method="post"></form>
 <form id="smazat" method="post"></form>
-<input type="hidden" name="idjidelnicek" form="smazat" value="<?php echo $_GET['idjidelnicek']; ?>">
+<input type="hidden" name="idjidelnicek" form="smazat" value="<?php echo htmlspecialchars($_GET['idjidelnicek']); ?>">
     <div class="form-group">
         <label for="nazev">Název:</label>
         <input type="text"form="edit" required id="nazev" name="nazev" class="form-control" value="<?php echo htmlspecialchars($jidelnicek['nazev']);?>"/>

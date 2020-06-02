@@ -5,7 +5,7 @@ require_once 'inc/db.php';
 
 if (!empty($_SESSION['user_id'])){
     //uživatel už je přihlášený, nemá smysl, aby se registroval
-    header('Location: index.php');
+    header('Location: prehled.php');
     exit();
 }
 

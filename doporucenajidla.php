@@ -37,7 +37,7 @@ $jidla = $queryJidla->fetchAll(PDO::FETCH_ASSOC);
     <?php
     foreach ($jidla as $jidlo) {
         echo "<tr>";
-        echo "<th>" . $jidlo['nazev'] . "</th><th>" . $jidlo['popis'] . "</th><th>" . $jidlo['cukry'] . "g</th><th>" . $jidlo['sacharidy'] . "g</th><th>" . $jidlo['bilkoviny'] . "g</th>";
+        echo "<th>" . htmlspecialchars($jidlo['nazev'] ). "</th><th>" . htmlspecialchars($jidlo['popis']) . "</th><th>" . htmlspecialchars($jidlo['cukry']) . "g</th><th>" . htmlspecialchars($jidlo['sacharidy']) . "g</th><th>" . htmlspecialchars($jidlo['bilkoviny']) . "g</th>";
         echo "</tr>";
     }
     ?>

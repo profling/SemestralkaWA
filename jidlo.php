@@ -104,10 +104,10 @@ Statistika:
         foreach ($jidla as $jidlo){
            ?>
             <tr>
-                <th> <?php echo $jidlo['nazev']; ?></th>
+                <th> <?php echo htmlspecialchars($jidlo['nazev']); ?></th>
                 <th>
                     <form method="get" action="popisjidla.php">
-                        <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>">
+                        <input type="hidden" name="idjidlo" value="<?php echo htmlspecialchars($jidlo['id']); ?>">
                         <button type="submit" class="btn btn-outline-info">Info</button>
                     </form>
                 </th>
@@ -123,8 +123,8 @@ Statistika:
                         if($pomoc==1){
                             ?>
                             <form method="post">
-                                <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>"/>
-                                <input type="hidden" name="datum" value="<?php echo $datum; ?>"/>
+                                <input type="hidden" name="idjidlo" value="<?php echo htmlspecialchars($jidlo['id']); ?>"/>
+                                <input type="hidden" name="datum" value="<?php echo htmlspecialchars($datum); ?>"/>
                                 <input type="hidden" name="stav" value="snedeno"/>
                                 <button type="submit" class="btn btn-outline-warning">Snědeno</button>
 
@@ -135,8 +135,8 @@ Statistika:
                         {
                             ?>
                             <form method="post">
-                                <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>"/>
-                                <input type="hidden" name="datum" value="<?php echo $datum; ?>"/>
+                                <input type="hidden" name="idjidlo" value="<?php echo htmlspecialchars($jidlo['id']); ?>"/>
+                                <input type="hidden" name="datum" value="<?php echo htmlspecialchars($datum); ?>"/>
                                 <input type="hidden" name="stav" value="vybrat"/>
                                 <button type="submit" class="btn btn-outline-success">Vybrat</button>
                             </form>
@@ -172,10 +172,10 @@ Statistika:
         foreach ($vlastni as $jidlo){
             ?>
             <tr>
-                <th> <?php echo $jidlo['nazev']; ?></th>
+                <th> <?php echo htmlspecialchars($jidlo['nazev']); ?></th>
                 <th>
                     <form method="get" action="popisjidla.php">
-                        <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>">
+                        <input type="hidden" name="idjidlo" value="<?php echo htmlspecialchars($jidlo['id']); ?>">
                         <button type="submit" class="btn btn-outline-info">Info</button>
                     </form>
                 </th>
@@ -191,8 +191,8 @@ Statistika:
                     if($pomoc==1){
                         ?>
                         <form method="post">
-                            <input type="hidden" name="idjidlo" value="<?php echo $jidlo['id']; ?>"/>
-                            <input type="hidden" name="datum" value="<?php echo $datum; ?>"/>
+                            <input type="hidden" name="idjidlo" value="<?php echo htmlspecialchars($jidlo['id']); ?>"/>
+                            <input type="hidden" name="datum" value="<?php echo htmlspecialchars($datum); ?>"/>
                             <input type="hidden" name="stav" value="snedeno"/>
                             <button type="submit" class="btn btn-outline-warning">Snědeno</button>
 

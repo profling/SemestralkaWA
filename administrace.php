@@ -26,17 +26,17 @@ $jidelnicky= $query->fetchALL(PDO::FETCH_ASSOC);
     foreach ($jidelnicky as $jidelnicek){
         echo "<tr>";
         //vypsani hodnot jidel
-        echo "<th>".$jidelnicek['nazev']."</th>"."<th>".$jidelnicek['popis']."</th>"."<th>".$jidelnicek['cukry']."g</th>"."<th>".$jidelnicek['sacharidy']."g</th>"."<th>".$jidelnicek['bilkoviny']."g</th>";
+        echo "<th>".htmlspecialchars($jidelnicek['nazev'])."</th>"."<th>".htmlspecialchars($jidelnicek['popis'])."</th>"."<th>".htmlspecialchars($jidelnicek['cukry'])."g</th>"."<th>".htmlspecialchars($jidelnicek['sacharidy'])."g</th>"."<th>".htmlspecialchars($jidelnicek['bilkoviny'])."g</th>";
         //odkaz na doporucena jidla
         echo "<th>";?>
         <form method="get" action="zmenajidla.php">
-            <input type="hidden" name="idjidelnicek" value="<?php echo $jidelnicek['id']; ?>"/>
+            <input type="hidden" name="idjidelnicek" value="<?php echo htmlspecialchars($jidelnicek['id']); ?>"/>
             <button type="submit" class="btn btn-outline-secondary">Jídla </button>
         </form>
         <?php echo "</th>";
         echo "<th>";?>
         <form method="get" action="editjidelnicek.php">
-            <input type="hidden" name="idjidelnicek" value="<?php echo $jidelnicek['id']; ?>"/>
+            <input type="hidden" name="idjidelnicek" value="<?php echo htmlspecialchars($jidelnicek['id']); ?>"/>
             <button type="submit" class="btn btn-outline-primary">Upravit </button>
         </form>
         <?php echo "</th>";
@@ -74,10 +74,10 @@ $jidla= $queryJidla->fetchAll(PDO::FETCH_ASSOC);
         <?php
         foreach ($jidla as $jidlo) {
             echo "<tr>";
-            echo "<th>" . $jidlo['nazev'] . "</th><th>" . $jidlo['popis'] . "</th><th>" . $jidlo['cukry'] . "g</th><th>" . $jidlo['sacharidy'] . "g</th><th>" . $jidlo['bilkoviny'] . "g</th>";
+            echo "<th>" . htmlspecialchars($jidlo['nazev']) . "</th><th>" . htmlspecialchars($jidlo['popis'] ). "</th><th>" . htmlspecialchars($jidlo['cukry']) . "g</th><th>" . htmlspecialchars($jidlo['sacharidy'] ). "g</th><th>" . htmlspecialchars($jidlo['bilkoviny']) . "g</th>";
             echo "<th>";
             echo '<form  method="get" action="editjidlo.php">';
-            echo '<input type="hidden" name="idjidla" value="'.$jidlo['id'].'"/>';
+            echo '<input type="hidden" name="idjidla" value="'.htmlspecialchars($jidlo['id']).'"/>';
             echo '<button type="submit" class="btn btn-outline-primary">Upravit</button>';
             echo '</form>';
             echo "</th>";

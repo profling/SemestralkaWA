@@ -28,7 +28,7 @@ $_SESSION['user_jidelnicek']= $_POST['idjidelnicek'];
     foreach ($jidelnicky as $jidelnicek){
         echo "<tr>";
         //vypsani hodnot jidel
-        echo "<th>".$jidelnicek['nazev']."</th>"."<th>".$jidelnicek['popis']."</th>"."<th>".$jidelnicek['cukry']."g</th>"."<th>".$jidelnicek['sacharidy']."g</th>"."<th>".$jidelnicek['bilkoviny']."g</th>";
+        echo "<th>".htmlspecialchars($jidelnicek['nazev'])."</th>"."<th>".htmlspecialchars($jidelnicek['popis'])."</th>"."<th>".htmlspecialchars($jidelnicek['cukry'])."g</th>"."<th>".htmlspecialchars($jidelnicek['sacharidy'])."g</th>"."<th>".htmlspecialchars($jidelnicek['bilkoviny'])."g</th>";
         //odkaz na doporucena jidla
         echo "<th>";?>
         <form method="get" action="doporucenajidla.php">
@@ -45,7 +45,7 @@ $_SESSION['user_jidelnicek']= $_POST['idjidelnicek'];
         {
             ?>
             <form method="post">
-                <input type="hidden" name="idjidelnicek" value="<?php echo $jidelnicek['id']; ?>"/>
+                <input type="hidden" name="idjidelnicek" value="<?php echo htmlspecialchars( $jidelnicek['id']); ?>"/>
                 <button type="submit" class="btn btn-outline-warning">Vybrán</button>
             </form>
             <?php
@@ -53,7 +53,7 @@ $_SESSION['user_jidelnicek']= $_POST['idjidelnicek'];
         else{
             ?>
             <form method="post">
-                <input type="hidden" name="idjidelnicek" value="<?php echo $jidelnicek['id']; ?>"/>
+                <input type="hidden" name="idjidelnicek" value="<?php echo htmlspecialchars($jidelnicek['id']); ?>"/>
                 <button type="submit" class="btn btn-outline-success">Vybrat</button>
             </form>
             <?php
