@@ -2,12 +2,24 @@
 //načteme připojení k databázi a inicializujeme session
 session_start();
 require_once 'inc/db.php';
+require_once 'inc/facebook.php';
 
 if (!empty($_SESSION['user_id'])){
     //uživatel už je přihlášený, nemá smysl, aby se registroval
     header('Location: prehled.php');
     exit();
 }
+#prihlasovani pomoci facebooku
+//inicializujeme helper pro vytvoření odkazu
+$fbHelper = $fb->getRedirectLoginHelper();
+
+//nastavení parametrů pro vyžádání oprávnění a odkaz na přesměrování po přihlášení
+$permissions = ['email'];
+$callbackUrl = htmlspecialchars('https://eso.vse.cz/~polo03/SemestralkaWA/fb-callback.php');
+//TODO nezapomeňte v předchozím řádku upravit adresu ke své vlastní aplikaci
+
+//necháme helper sestavit adresu pro odeslání požadavku na přihlášení
+$fbLoginUrl = $fbHelper->getLoginUrl($callbackUrl, $permissions);
 
 $errors=[];
 if (!empty($_POST)){
@@ -117,6 +129,7 @@ include 'inc/header.php';
             ?>
         </div>
         <button type="submit" class="btn btn-primary">registrovat se</button>
+        <a href="<?php echo $fbLoginUrl; ?>" class="btn btn-outline-primary">registrovat se pomocí Facebooku</a>
         <a href="login.php" class="btn btn-light">přihlásit se</a>
         <a href="index.php" class="btn btn-light">zrušit</a>
     </form>

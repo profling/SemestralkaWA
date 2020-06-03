@@ -72,8 +72,8 @@ $fbLoginUrl = $fbHelper->getLoginUrl($callbackUrl, $permissions);
             <input type="password" name="password" id="password" required class="form-control <?php echo ($errors?'is-invalid':''); ?>" />
         </div>
         <button type="submit" class="btn btn-primary">přihlásit se</button>
+        <a href="<?php echo $fbLoginUrl; ?>" class="btn btn-outline-primary">přihlásit se pomocí Facebooku</a>
         <a href="registration.php" class="btn btn-light">registrovat se</a>
-        <a href="<?php echo $fbLoginUrl; ?>" class="btn btn-light">přihlásit se pomocí Facebooku</a>
         <a href="index.php" class="btn btn-light">zrušit</a>
 
     </form>

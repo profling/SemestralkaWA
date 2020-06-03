@@ -43,7 +43,7 @@ $jidla = $queryJidla->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
 </table>
-
+    <a href="jidelnicek.php" class="btn btn-outline-primary">Zpět</a>
 
 
 

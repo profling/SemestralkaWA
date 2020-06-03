@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2facacb5-fd07-47ea-a477-d822e00685b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jidlo.php" beforeDir="false" afterPath="$PROJECT_DIR$/jidlo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doporucenajidla.php" beforeDir="false" afterPath="$PROJECT_DIR$/doporucenajidla.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zmenajidla.php" beforeDir="false" afterPath="$PROJECT_DIR$/zmenajidla.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590652465542</updated>
       <workItem from="1590652466677" duration="52167000" />
-      <workItem from="1591016370648" duration="22899000" />
+      <workItem from="1591016370648" duration="25616000" />
     </task>
     <task id="LOCAL-00001" summary="prvni a testovací commit">
       <created>1590652528349</created>
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591126777969</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="u jidla jsou uz funkcni ty info tlacitka. juhuuuu">
+      <created>1591192812551</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591192812551</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +215,8 @@
     <MESSAGE value="hotova administrace jidelnicku" />
     <MESSAGE value="hotova kompletne administrace huraaaaaaa" />
     <MESSAGE value="htmlspecialchars naprosto vsude" />
-    <option name="LAST_COMMIT_MESSAGE" value="htmlspecialchars naprosto vsude" />
+    <MESSAGE value="u jidla jsou uz funkcni ty info tlacitka. juhuuuu" />
+    <option name="LAST_COMMIT_MESSAGE" value="u jidla jsou uz funkcni ty info tlacitka. juhuuuu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="484" y="3" key="#PHP" timestamp="1590866518510">
@@ -216,10 +227,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666803642" />
-    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1591126777149">
+    <state x="364" y="9" key="CommitChangelistDialog2" timestamp="1591192811765">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591108679460" />
+    <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591192811765" />
     <state x="364" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591126777149" />
     <state x="553" y="296" width="445" height="260" key="ComposerInitDialogKey" timestamp="1590866545202">
       <screen x="0" y="0" width="1536" height="824" />
@@ -241,10 +252,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="125" width="626" height="577" key="RollbackChangesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1590666974227" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591126786189">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591192818564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591108688169" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1591192818564" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591126786189" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590669254047">
       <screen x="0" y="0" width="1536" height="824" />
@@ -260,7 +271,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/registration.php</url>
-          <line>55</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

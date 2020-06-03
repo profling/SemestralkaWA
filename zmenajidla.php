@@ -112,3 +112,4 @@ $jidla = $queryJidla->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
 </table>
+<a href="administrace.php" class="btn btn-outline-primary">Zpět</a>
